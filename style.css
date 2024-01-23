@@ -112,14 +112,75 @@ nav .fa{
         width: 110px;
     }
    
-    
-
-    .nav-links ul li {
-        display: block;
-    }
-    .nav-links{
+    .nav-links ul {
+        padding: 0;
+        list-style: none;
+      }
+      
+      .nav-links ul li {
+        margin-bottom: 10px; /* Adjust the spacing between words if needed */
+        position: relative;
+      }
+      
+      .nav-links ul li span {
+        display: inline-block;
+        color: white; /* Set the initial color to white */
+        animation: bounceColorChange 4s ;
+        animation-delay: var(--delay);
+      }
+      .nav-links ul li:nth-child(1) span {
+        --delay: 0s;
+      }
+      
+      .nav-links ul li:nth-child(1) span {
+        --delay: 3s;
+      }
+      
+      .nav-links ul li:nth-child(2) span {
+        --delay: 6s;
+      }
+      .nav-links ul li:nth-child(3) span {
+        --delay: 9s;
+      }
+      .nav-links ul li:nth-child(4) span {
+        --delay: 12s;
+      }
+      .nav-links ul li:nth-child(5) span {
+        --delay: 15s;
+      }
+      
+      /* Add more styles and animation delays for additional list items */
+      
+      @keyframes bounceColorChange {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        25% {
+          transform: translateY(-10px);
+          color: blue;
+        }
+        50% {
+          transform: translateY(0);
+          color: red;
+        }
+        75% {
+          transform: translateY(-10px);
+          color: violet;
+        }
+        100% {
+          transform: translateY(0);
+          color: grey;
+        }
+      }
+      
+      
+      
+      /* Add more color change keyframes for additional list items */
+      
+      
+    .nav-links {
         position: fixed;
-        background: linear-gradient(145deg, #000000, #e81cff, #40c9ff);
+        background: black;
         height: 100vh;
         width: 200px;
         top: 0;
@@ -127,7 +188,24 @@ nav .fa{
         text-align: left;
         z-index: 2;
         transition: 1s;
-    }
+        overflow: hidden;
+      }
+      
+     
+      
+      
+      
+    /*.nav-links{
+        position: fixed;
+        background:transparent; /*linear-gradient(145deg, #000000, #e81cff, #40c9ff);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }*/
     nav .fa{
         display: block;
         color: #fff;
